@@ -18,6 +18,7 @@ function solution(answers) {
     box.push(S1,S2,S3)
     
     let maxScore = Math.max.apply(null, box)
+    //let maxScore = Math.max(S1, S2, S3)
     for(let i = 0; i < 3; i++){
         if(box[i] == maxScore){
             answer.push(i + 1)
@@ -26,3 +27,5 @@ function solution(answers) {
     
     return answer;
 }
+/*바보 같이 풀었다... let maxScore = Math.max(S1,S2,S3) 했어도 됐었다..
+대신! 배열에서 최대값을 구할려면 Math.max.apply(null, arr)인 것을 다시 한번 생각!!*/
