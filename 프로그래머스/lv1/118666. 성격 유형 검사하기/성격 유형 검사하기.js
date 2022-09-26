@@ -4,13 +4,11 @@ function solution(survey, choices) {
                     N : 0}
     let box = [];
     
-    for(let i = 0; i < choices.length; i++){
-        choices[i] -= 4
-    }
-    for(let i = 0; i < survey.length; i++){
-        box = survey[i].split('')
-        surScore[box[1]] += choices[i]
-    }
+    choices.forEach((choice, i, a) => a[i] -= 4)
+    
+    survey.forEach((mbti, i, a) => {
+        box = a[i].split('');
+        surScore[box[1]] += choices[i]})
     
     surScore.T > surScore.R ? answer+='T' : answer+='R'
     surScore.F > surScore.C ? answer+='F' : answer+='C'
@@ -19,3 +17,12 @@ function solution(survey, choices) {
     
     return answer;
 }
+
+    // for(let i = 0; i < choices.length; i++){
+    //     choices[i] -= 4
+    // }
+
+    // for(let i = 0; i < survey.length; i++){
+    //     box = survey[i].split('')
+    //     surScore[box[1]] += choices[i]
+    // }
