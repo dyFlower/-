@@ -12,3 +12,8 @@ function solution(s) {
     answer = s.join(' ')
     return answer;
 }
+
+// BEST : s
+//         .split(' ')
+//         .map((v) => v.charAt(0).toUpperCase() + v.substring(1).toLowerCase())
+//         .join(' ');
