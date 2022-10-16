@@ -17,3 +17,5 @@ rl.on('line', function (line) {
     }
     console.log(answer)
 });
+
+//repeat() 사용하기!!!
