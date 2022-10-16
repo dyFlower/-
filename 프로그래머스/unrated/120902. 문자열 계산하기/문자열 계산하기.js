@@ -11,3 +11,6 @@ function solution(my_string) {
     }
     return answer;
 }
+
+//var solution=eval
+//eval 함수 뭐임???? 열받네,,,
