@@ -1,12 +1,20 @@
 function solution(denum1, num1, denum2, num2) {
     var answer = [];
-    let temp = []
-    answer[0] = denum1 * num2 + denum2 * num1
-    answer[1] =  num1 * num2
-    for(let i = 1; i <= Math.min(answer[0],answer[1]); i++){
-        if(answer[0] % i === 0 && answer[1] % i === 0){
-            temp.push(i)
+    
+     let maxNum = function(num1,num2){
+        if(num2 === 0){
+            return num1
+        }
+        else {
+           return maxNum(num2, num1%num2)
         }
     }
-    return answer.map(v => v / Math.max(...temp));
+
+    answer[0] = (denum1 * num2  + denum2 * num1) 
+    answer[1] = num1 * num2 
+    let g = maxNum(answer[0],answer[1])
+    answer[0] = (denum1 * num2  + denum2 * num1) /g
+    answer[1] = num1 * num2 /g
+    
+    return answer;
 }
