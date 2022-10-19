@@ -1,3 +1,4 @@
+//공부 다시! 아니 문제가 이상해,,
 function solution(polynomial) {
     var answer = 0;
     let temp = 0;
