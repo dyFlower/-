@@ -12,4 +12,4 @@ function solution(numlist, n) {
 //다시 풀어보기!!
 // function solution(numlist, n) {
 //   return numlist.sort((a, b) => Math.abs(a - n) - Math.abs(b - n) || b - a);
-// }
+// 아 삼항 연산자의 false를 통해 푸는 거였군 이해 완료!}
