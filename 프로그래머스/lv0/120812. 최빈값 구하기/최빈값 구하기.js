@@ -18,9 +18,9 @@ function solution(array) {
     }else{
         answer = Object.keys(temp)[Object.values(temp).indexOf(maxCnt)]
     }
-    // console.log(Object.keys(temp))
-    // console.log(Object.values(temp))
-    // console.log(maxCnt)
-    // console.log(temp)
+    console.log(Object.keys(temp))
+    console.log(Object.values(temp))
+    console.log(maxCnt)
+    console.log(temp)
     return +answer;
 }
