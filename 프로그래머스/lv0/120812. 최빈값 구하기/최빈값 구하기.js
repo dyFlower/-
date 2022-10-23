@@ -31,3 +31,5 @@ function solution(array) {
     // }
     // temp = [...temp]
     // console.log(temp)
+//sort를 인덱스별로 할 수 있다!!
+//객체 초기화에서 필터를 쓰면 줄이 줄어드네요~~
