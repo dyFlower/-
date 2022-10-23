@@ -4,4 +4,4 @@ function solution(n) {
             return i
         }
     }
-} 
+}
