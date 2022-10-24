@@ -1,12 +1,27 @@
-function solution(id_pw, db) {
-    for(let i = 0; i < db.length; i++){
-        if(id_pw[0] === db[i][0]){
-            if(id_pw[1] == db[i][1]){
-                return 'login'
-            }else{
-                return 'wrong pw'
-            }
-        }
+// function solution(id_pw, db) {
+//     for(let i = 0; i < db.length; i++){
+//         if(id_pw[0] === db[i][0]){
+//             if(id_pw[1] == db[i][1]){
+//                 return 'login'
+//             }else{
+//                 return 'wrong pw'
+//             }
+//         }
+//     }
+//     return 'fail';
+// }
+function solution (id_pw, db) {
+    let result ='';
+    for(let i = 0; i< db.length; i++){
+        let checkedId = id_pw[0] === db[i][0]
+        let checkedPw = id_pw[1] === db[i][1]
+
+        if(checkedId && checkedPw) {
+                return 'login';
+       } 
+        else if (checkedId && !checkedPw) {
+            return 'wrong pw'
+       }
     }
-    return 'fail';
+    return 'fail'
 }
