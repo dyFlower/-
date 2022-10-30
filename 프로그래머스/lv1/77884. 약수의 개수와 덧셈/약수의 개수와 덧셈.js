@@ -1,7 +1,7 @@
 function solution(left, right) {
     var answer = 0;
     const num = right - left + 1 //갯수
-    let cnt = 0;
+    let cnt = 0; //약수의 갯수
     
     for(let i = 0; i < num ; i++){
         for(let j = 1; j <= left; j++){
