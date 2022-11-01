@@ -4,7 +4,7 @@ function solution(n, arr1, arr2) {
     let arr3 = new Array(n).fill('')
     for(let i in arr1){
         for(let j in arr1[i]){
-            if(arr1[i][j] == 1 || arr2[i][j] == 1){
+            if(arr1[i][j] | arr2[i][j] == 1){
                 arr3[i] += '#'
             }else{arr3[i] += ' '}
         }
