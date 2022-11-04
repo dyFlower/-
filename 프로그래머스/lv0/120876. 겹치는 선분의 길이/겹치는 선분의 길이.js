@@ -11,12 +11,8 @@ function solution(lines) {
     for (let i in temp) {
         count[temp[i]] = temp.filter((v) => v == temp[i]).length;
     }
-    count = Object.entries(count);
-
-    for (let i of count) {
-        if (i[1] > 1) {
-            answer++;
-        }
+    for(let i of Object.values(count)){
+        i > 1 ? answer++ : ''
     }
     return answer;
 }
