@@ -19,3 +19,5 @@ function solution(s) {
     }
     return Number(answer);
 }
+
+//미친 풀이 : split >> join
