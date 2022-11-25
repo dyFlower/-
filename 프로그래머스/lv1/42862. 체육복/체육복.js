@@ -30,7 +30,5 @@ function solution(n, lost, reserve) {
             cntL++
         }
     }
-    console.log(student)
-    console.log(cntL)
     return n - cntL;
 }
