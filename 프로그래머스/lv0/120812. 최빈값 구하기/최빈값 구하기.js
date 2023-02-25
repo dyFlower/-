@@ -2,11 +2,11 @@ function solution(array) {
     let temp = {}
     let cnt = 0;
     
-    for(i in array){
+    for(let i in array){
         temp[array[i]] = array.filter(v => v === array[i]).length
     }
     let maxCnt = Math.max(...Object.values(temp))
-    for(i of Object.values(temp)){
+    for(let i of Object.values(temp)){
         if(maxCnt === i){
             cnt++}
     }
