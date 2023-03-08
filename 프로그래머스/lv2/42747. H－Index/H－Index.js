@@ -1,13 +1,12 @@
 function solution(citations) {
     let answer = 0;
-    let tempUp = []
-    let tempDown = []
-    for(let i = 0; i < citations.length + 1; i++){
-        tempUp = citations.filter(v => v >= i)
-        tempDown = citations.filter(v => v < i)
-        if(tempUp.length >= i && tempDown.length < i){
-            answer = i
+    citations.sort((a, b) => b - a);
+    for(let i = 0; i < citations.length; i++){
+        if(citations[i] >= i + 1){
+            answer = i + 1;
+        } else {
+            break;
         }
     }
-    return answer
+    return answer;
 }
